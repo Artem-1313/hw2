@@ -42,7 +42,7 @@ def split_str(s):
         s[0]=float(s[0])
         s[2]=float(s[2])
     except ValueError:
-        return FormulaError() 
+        raise FormulaError from None 
     else:
         return arith(s[0],s[2],s[1])
 
@@ -50,11 +50,12 @@ def split_str(s):
     
 
 
-print(split_str("1 + 2 _ 2"))
+
 print(split_str("1 - 2"))
 print(split_str("1 / 2"))
 print(split_str("1 * 2"))
-print(split_str("j * 2"))
+print(split_str("2 * 2"))
+print(split_str("ae * 2"))
 
 
 
