@@ -18,6 +18,7 @@ r=ReverseIter([1,2,3,8,9,88])
 
 print(r.__next__())
 print(r.__next__())
+print(r.__next__())
 print("---------------")
 s=ReverseIter("hello")
 print(s.__next__())
